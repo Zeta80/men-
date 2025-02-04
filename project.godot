@@ -14,3 +14,7 @@ config/name="menu_template"
 run/main_scene="res://menus/scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioStreamPlayer2d="*res://menus/scenes/audio_stream_player_2d.tscn"
