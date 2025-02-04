@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cawi1y20tbbfy"]
+[gd_scene load_steps=9 format=3 uid="uid://cawi1y20tbbfy"]
 
 [ext_resource type="Texture2D" uid="uid://b7e5ajqmhlt2u" path="res://menus/assets/background/option-img.jpg" id="1_n0tpx"]
 [ext_resource type="Script" path="res://menus/scripts/option_menu.gd" id="1_t5b45"]
+[ext_resource type="Script" path="res://menus/scripts/master_slide.gd" id="3_6ahwd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwen2"]
 texture = ExtResource("1_n0tpx")
@@ -118,6 +119,7 @@ text = "Master"
 layout_mode = 2
 max_value = 1.0
 step = 0.05
+script = ExtResource("3_6ahwd")
 
 [node name="Music" type="Label" parent="AudioControl/Buttons_cont"]
 layout_mode = 2
