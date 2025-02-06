@@ -9,7 +9,8 @@ func _ready() -> void:
 	#-master_volume = 1.0
 	#-sfx = 1.0
 	if !FileAccess.file_exists(SETTING_FILE_PATH):
-		config.set_value("audio", "master_volume", 1.0)
+		config.set_value("audio", "master_volume", 0.005)
+		config.set_value("audio", "music_volume", 0.005)
 		config.save(SETTING_FILE_PATH)
 	else:
 	#altrimenti carico i dati del file settings.ini
