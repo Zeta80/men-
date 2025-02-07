@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	pass
 
 
+
 	#funzione per cambiare il volume bus in audio in base a dove chiami
 func change_audio_bus(value: float, index: int):
 	AudioServer.set_bus_volume_db(index, linear_to_db(value))
