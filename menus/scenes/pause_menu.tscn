@@ -53,6 +53,7 @@ shadow_size = 5
 shadow_offset = Vector2(5, 5)
 
 [node name="Pause_menu" type="Control"]
+process_mode = 3
 z_index = 4096
 layout_mode = 3
 anchors_preset = 15
@@ -111,6 +112,16 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_twysb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_mae36")
 text = "Resume"
 
+[node name="Button_reset" type="Button" parent="Buttons_cont"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lvtbe")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2dgmb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_twysb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mae36")
+text = "Reset Levelssss"
+
 [node name="Button_options" type="Button" parent="Buttons_cont"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -132,5 +143,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_mae36")
 text = "Exit to main menu"
 
 [connection signal="pressed" from="Buttons_cont/Button_resume" to="." method="_on_button_resume_pressed"]
+[connection signal="pressed" from="Buttons_cont/Button_reset" to="." method="_on_button_reset_pressed"]
 [connection signal="pressed" from="Buttons_cont/Button_options" to="." method="_on_button_options_pressed"]
 [connection signal="pressed" from="Buttons_cont/Button_exit" to="." method="_on_button_exit_pressed"]
