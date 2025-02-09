@@ -2,6 +2,8 @@ extends Control
 
 signal pause_delete
 signal reset_level
+signal options
+signal main_menu
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -21,8 +23,8 @@ func _on_button_reset_pressed() -> void:
 	
 	
 func _on_button_options_pressed() -> void:
-	pass # Replace with function body.
+	options.emit()
 
 
 func _on_button_exit_pressed() -> void:
-	pass # Replace with function body.
+	main_menu.emit()

@@ -18,6 +18,8 @@ func _input(event: InputEvent) -> void:
 		pause_menu_instance = pause_menu.instantiate()
 		pause_menu_instance.connect("pause_delete", Callable(self, "on_pause_delete"))
 		pause_menu_instance.connect("reset_level", Callable(self, "restart_game"))
+		pause_menu_instance.connect("options", Callable(self, "option_game"))
+		pause_menu_instance.connect("main_menu", Callable(self, "main_menu_game"))
 		add_child(pause_menu_instance)
 		pause_game(true)
 		
@@ -34,7 +36,12 @@ func restart_game() -> void:
 	pause_game(false)
 	get_tree().reload_current_scene()
 	
+func option_game() -> void:
+	pause_game(false)
+	get_tree().change_scene_to_file("res://menus/scenes/option_menu.tscn")
 	
-	
+func main_menu_game() -> void:
+	pause_game(false)
+	get_tree().change_scene_to_file("res://menus/scenes/main_menu.tscn")
 	
 	
