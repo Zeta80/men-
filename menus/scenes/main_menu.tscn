@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://btcfigagl7wq0"]
+[gd_scene load_steps=9 format=3 uid="uid://btcfigagl7wq0"]
 
 [ext_resource type="Texture2D" uid="uid://crk3jq04o2fy2" path="res://menus/assets/background/img1/aesthetic-pixel-art-garden-at-night-0ax4fopcqzot21lj.jpg" id="1_4bevd"]
 [ext_resource type="Script" path="res://menus/scripts/main_menu.gd" id="1_ukf5g"]
+[ext_resource type="PackedScene" uid="uid://cawi1y20tbbfy" path="res://menus/scenes/option_menu.tscn" id="2_ck0dt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyiai"]
 texture = ExtResource("1_4bevd")
@@ -62,6 +63,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ukf5g")
+option_menu = ExtResource("2_ck0dt")
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1

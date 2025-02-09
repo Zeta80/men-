@@ -2,6 +2,7 @@ extends Control
 
 @onready var master_slide: HSlider = $AudioControl/Buttons_cont/Master_slide
 @onready var music_slide: HSlider = $AudioControl/Buttons_cont/Music_slide
+signal hide_option_menu 
 
 func _ready() -> void:
 	#vado a settare la barra del master in base al valore salvato nel config 
@@ -14,7 +15,7 @@ func _process(delta: float) -> void:
 	
 
 func _on_button_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://menus/scenes/main_menu.tscn")
+	hide_option_menu.emit()
 
 
 func _on_master_slide_drag_ended(value_changed: bool) -> void:

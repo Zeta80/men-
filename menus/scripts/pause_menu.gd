@@ -12,6 +12,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		pause_delete.emit()
 
 func _on_button_resume_pressed() -> void:
 	pause_delete.emit()
