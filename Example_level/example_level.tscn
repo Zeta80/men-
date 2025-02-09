@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://8dk8d4vddhl8"]
+[gd_scene load_steps=10 format=3 uid="uid://8dk8d4vddhl8"]
 
 [ext_resource type="PackedScene" uid="uid://cea5yupa5hyqj" path="res://Example_level/character_body_3d.tscn" id="1_1hhyx"]
 [ext_resource type="Script" path="res://Example_level/game_controller.gd" id="1_882v6"]
 [ext_resource type="PackedScene" uid="uid://bxa5nus5m4ntu" path="res://menus/scenes/pause_menu.tscn" id="2_hdh4u"]
+[ext_resource type="PackedScene" uid="uid://cawi1y20tbbfy" path="res://menus/scenes/option_menu.tscn" id="3_72c4g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80w37"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -25,6 +26,7 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [node name="Example_level" type="Node3D"]
 script = ExtResource("1_882v6")
 pause_menu = ExtResource("2_hdh4u")
+option_menu = ExtResource("3_72c4g")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mugxy")
