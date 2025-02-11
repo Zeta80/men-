@@ -28,6 +28,8 @@ script = ExtResource("1_882v6")
 pause_menu = ExtResource("2_hdh4u")
 option_menu = ExtResource("3_72c4g")
 
+[node name="Node" type="Node" parent="."]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mugxy")
 
