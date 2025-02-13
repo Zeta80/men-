@@ -7,6 +7,7 @@ func _ready() -> void:
 	audio_settings = ConfigFileHandler.load_audio_setting()
 	change_audio_bus(min(audio_settings.master_volume, 1.0)*100, 0)
 	change_audio_bus(min(audio_settings.music_volume, 1.0)*100, 0)
+	change_audio_bus(min(audio_settings.sfx_volume, 1.0)*100, 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
